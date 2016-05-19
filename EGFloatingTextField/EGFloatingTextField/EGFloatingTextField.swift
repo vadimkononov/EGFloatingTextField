@@ -57,7 +57,7 @@ public class EGFloatingTextField: UITextField {
         self.commonInit()
     }
     
-    func commonInit(){
+    public func commonInit(){
         
         self.emailValidationBlock = ({(text:String, inout message: String) -> Bool in
             let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
