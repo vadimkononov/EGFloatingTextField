@@ -27,11 +27,11 @@ public class EGFloatingTextField: UITextField {
     private var numberValidationBlock : EGFloatingTextFieldValidationBlock
     
     
-    let kDefaultInactiveColor = UIColor(white: CGFloat(0), alpha: CGFloat(0.54))
-    let kDefaultActiveColor = UIColor.blueColor()
-    let kDefaultErrorColor = UIColor.redColor()
-    let kDefaultLineHeight = CGFloat(22)
-    let kDefaultLabelTextColor = UIColor(white: CGFloat(0), alpha: CGFloat(0.54))
+    public var kDefaultInactiveColor = UIColor(white: CGFloat(0), alpha: CGFloat(0.54))
+    public var kDefaultActiveColor = UIColor.blueColor()
+    public var kDefaultErrorColor = UIColor.redColor()
+    public var kDefaultLineHeight = CGFloat(22)
+    public var kDefaultLabelTextColor = UIColor(white: CGFloat(0), alpha: CGFloat(0.54))
     
     
     public var floatingLabel : Bool!
@@ -303,12 +303,12 @@ public class EGFloatingTextField: UITextField {
             
             if self.validationType! == .Email {
                 
-                var isValid = self.emailValidationBlock(text: self.text!, message: &message)
+                let isValid = self.emailValidationBlock(text: self.text!, message: &message)
                 
                 performValidation(isValid,message: message)
                 
             } else {
-                var isValid = self.numberValidationBlock(text: self.text!, message: &message)
+                let isValid = self.numberValidationBlock(text: self.text!, message: &message)
                 
                 performValidation(isValid,message: message)
             }
