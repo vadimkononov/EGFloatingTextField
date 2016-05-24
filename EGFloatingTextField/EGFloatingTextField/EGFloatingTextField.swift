@@ -139,7 +139,7 @@ public class EGFloatingTextField: UITextField {
     }
     override public func resignFirstResponder() -> Bool {
         
-        let flag:Bool = super.becomeFirstResponder()
+        let flag:Bool = super.resignFirstResponder()
         
         if flag {
             
