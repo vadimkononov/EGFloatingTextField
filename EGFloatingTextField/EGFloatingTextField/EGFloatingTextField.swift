@@ -316,6 +316,18 @@ public class EGFloatingTextField: UITextField {
     }
     
     
+    public func updateLabelFloating ()
+    {
+        if self.floatingLabel! {
+            
+            if !self.floating! || self.text!.isEmpty {
+                self.floatLabelToTop()
+                self.floating = true
+            }
+        }
+    }
+    
+    
 }
 
 extension EGFloatingTextField {
