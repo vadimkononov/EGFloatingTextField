@@ -280,7 +280,7 @@ public class EGFloatingTextField: UITextField {
         CATransaction.commit()
     }
     
-    func performValidation(isValid:Bool,message:String){
+    public func performValidation(isValid:Bool,message:String){
         if !isValid {
             self.hasError = true
             self.errorMessage = message
