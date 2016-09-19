@@ -175,21 +175,21 @@ public class EGFloatingTextField: UITextField {
         
         if  self.enabled  {
             
-            CGContextBeginPath(context);
-            CGContextAddLines(context, borderlines, 2);
-            CGContextSetLineWidth(context, 1.0);
-            CGContextSetStrokeColorWithColor(context, borderColor.CGColor);
-            CGContextStrokePath(context);
+            CGContextBeginPath(context!);
+            CGContextAddLines(context!, borderlines, 2);
+            CGContextSetLineWidth(context!, 1.0);
+            CGContextSetStrokeColorWithColor(context!, borderColor.CGColor);
+            CGContextStrokePath(context!);
             
         } else {
             
-            CGContextBeginPath(context);
-            CGContextAddLines(context, borderlines, 2);
-            CGContextSetLineWidth(context, 1.0);
+            CGContextBeginPath(context!);
+            CGContextAddLines(context!, borderlines, 2);
+            CGContextSetLineWidth(context!, 1.0);
             let  dashPattern : [CGFloat]  = [2, 4]
-            CGContextSetLineDash(context, 0, dashPattern, 2);
-            CGContextSetStrokeColorWithColor(context, borderColor.CGColor);
-            CGContextStrokePath(context);
+            CGContextSetLineDash(context!, 0, dashPattern, 2);
+            CGContextSetStrokeColorWithColor(context!, borderColor.CGColor);
+            CGContextStrokePath(context!);
             
         }
     }
